@@ -1,0 +1,20 @@
+# Generated directories
+build
+
+# Dependency directories
+sdl
+# Needed to build sdl with cmake
+!sdl/sdl2-config.cmake
+
+# vscode config files
+tasks.json
+launch.json
+c_cpp_properties.json
+
+# Build files
+*.pdb
+*.exe
+*.dll
+*.ilk
+*.obj
+
