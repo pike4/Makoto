@@ -2,10 +2,9 @@
 build
 
 # Dependency directories
-sdl
+dependencies
 # Needed to build sdl with cmake
-!sdl/sdl2-config.cmake
-
+!dependencies\sdl\sdl2-config.cmake
 # vscode config files
 tasks.json
 launch.json

@@ -3,9 +3,10 @@ project(unnamed-engine)
 
 include(FetchContent)
 
-set(SDL_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/sdl)
-set(SDL_IMAGE_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/sdl-image)
-set(JSON_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/json)
+set(DEPENDENCIES_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/dependencies)
+set(SDL_ROOT_DIR ${DEPENDENCIES_ROOT_DIR}/sdl)
+set(SDL_IMAGE_ROOT_DIR ${DEPENDENCIES_ROOT_DIR}/sdl-image)
+set(JSON_ROOT_DIR ${DEPENDENCIES_ROOT_DIR}/json)
 
 FetchContent_Declare(dep_sdl
     SOURCE_DIR ${SDL_ROOT_DIR}
@@ -32,8 +33,9 @@ include_directories(${SDL2_INCLUDE_DIRS})
 
 find_package(SDL2 REQUIRED)
 
+
 add_executable(engine
-    main.cpp)
+    src/main.cpp)
 
     
 target_link_libraries(engine ${SDL2_LIBRARIES} )
